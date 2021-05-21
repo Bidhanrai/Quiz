@@ -51,7 +51,12 @@ class _QuizViewState extends State<QuizView> {
               ),
             );
           } else {
-            return Center(child: CircularProgressIndicator(),);
+            return Center(
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Constant.primaryColorLight),
+                strokeWidth: 6,
+              ),
+            );
           }
 
         },

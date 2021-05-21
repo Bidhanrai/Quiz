@@ -34,7 +34,6 @@ class _HomeViewState extends State<HomeView> {
   Widget _body() {
     return GridView.count(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      shrinkWrap: true,
       crossAxisCount: 2,
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
