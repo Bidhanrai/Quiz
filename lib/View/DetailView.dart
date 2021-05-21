@@ -4,9 +4,10 @@ import 'package:quick_quiz/View/QuizView.dart';
 
 class DetailView extends StatefulWidget {
 
+  final int categoryNumber;
   final String category;
   final String imageUrl;
-  const DetailView({Key key, this.category, this.imageUrl}) : super(key: key);
+  const DetailView({Key key, this.category, this.imageUrl, this.categoryNumber}) : super(key: key);
 
   @override
   _DetailViewState createState() => _DetailViewState();
@@ -21,7 +22,10 @@ class _DetailViewState extends State<DetailView> {
       ),
       body: Column(
         children: [
-          Image.asset(widget.imageUrl),
+          Hero(
+            tag: widget.category,
+            child: Image.asset(widget.imageUrl),
+          ),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 4),
@@ -60,7 +64,7 @@ class _DetailViewState extends State<DetailView> {
         backgroundColor: MaterialStateProperty.all(Constant.primaryColorLight),
       ),
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>QuizView()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>QuizView(difficulty: label.toLowerCase(), category: widget.categoryNumber,)));
       },
     );
   }

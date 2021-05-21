@@ -47,6 +47,7 @@ class _HomeViewState extends State<HomeView> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => DetailView(
+                    categoryNumber: _homeViewModel.categories[index]["categoryNumber"],
                     category: _homeViewModel.categories[index]["title"],
                     imageUrl: _homeViewModel.categories[index]["image"],
                   ),
@@ -57,11 +58,14 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 Expanded(
                   flex: 2,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(_homeViewModel.categories[index]["image"]),
-                        fit: BoxFit.cover,
+                  child: Hero(
+                    tag: _homeViewModel.categories[index]["title"],
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(_homeViewModel.categories[index]["image"]),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -72,12 +76,13 @@ class _HomeViewState extends State<HomeView> {
                   flex: 1,
                   child: Container(
                     width: double.infinity,
-                    color: Constant.primaryColorLighter,
+                    //color: Constant.primaryColorLighter,
+                    color: Constant.primaryColorLight,
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     alignment: Alignment.center,
                     child: Text(
                       _homeViewModel.categories[index]["title"],
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500,),
+                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16,),
                     ),
                   ),
                 ),
