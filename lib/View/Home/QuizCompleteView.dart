@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
-import 'package:quick_quiz/View/HomeView.dart';
+import 'package:quick_quiz/View/Home/HomeView.dart';
 
 class QuizCompleteView extends StatelessWidget {
   const QuizCompleteView({Key key}) : super(key: key);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
-import 'package:quick_quiz/View/DetailView.dart';
+import 'package:quick_quiz/View/AboutView.dart';
+import 'package:quick_quiz/View/Home/DetailView.dart';
+import 'package:quick_quiz/View/ProfileView.dart';
 import 'package:quick_quiz/ViewModel/HomeViewModel.dart';
 
 class HomeView extends StatefulWidget {
@@ -26,7 +28,9 @@ class _HomeViewState extends State<HomeView> {
       title: Text("Categories"),
       centerTitle: true,
       actions: [
-        IconButton(icon: Icon(Icons.person), onPressed: (){},),
+        IconButton(icon: Icon(Icons.person), onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileView()));
+        },),
       ],
     );
   }
@@ -102,10 +106,20 @@ class _HomeViewState extends State<HomeView> {
         _bottomNavigationBarItem("Profile", Icons.person),
         _bottomNavigationBarItem("About", Icons.menu),
       ],
+      onTap: (int value) {
+        if(value==1) {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileView()));
+        } else if(value==2){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutView()));
+        }
+      },
     );
   }
 
   BottomNavigationBarItem _bottomNavigationBarItem(String label, IconData iconData) {
-    return BottomNavigationBarItem(icon: Icon(iconData), label: label,);
+    return BottomNavigationBarItem(
+      icon: Icon(iconData),
+      label: label,
+    );
   }
 }

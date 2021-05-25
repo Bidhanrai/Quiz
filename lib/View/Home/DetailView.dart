@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
-import 'package:quick_quiz/View/QuizView.dart';
+import 'package:quick_quiz/View/Home/QuizView.dart';
 
 class DetailView extends StatefulWidget {
 

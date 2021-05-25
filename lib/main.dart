@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
-import 'package:quick_quiz/View/HomeView.dart';
+import 'package:quick_quiz/View/Home/HomeView.dart';
+import 'package:quick_quiz/View/LoginView.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         //primarySwatch: Colors.blue,
         primaryColor: Constant.primaryColor,
       ),
-      home: HomeView(),
+      home: LoginView(),
     );
   }
 }

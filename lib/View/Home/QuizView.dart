@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
 import 'package:quick_quiz/Model/QuizQuestionModel.dart';
 import 'package:quick_quiz/Service/ApiService.dart';
-import 'package:quick_quiz/View/QuizCompleteView.dart';
+import 'package:quick_quiz/View/Home/QuizCompleteView.dart';
 import 'package:html/parser.dart';
 
 class QuizView extends StatefulWidget {
@@ -75,6 +75,12 @@ class _QuizViewState extends State<QuizView> {
           backgroundColor: Constant.primaryColorLighter,
           valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
         ),
+      ),
+      leading: IconButton(
+        icon: Icon(Icons.close),
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
     );
   }
