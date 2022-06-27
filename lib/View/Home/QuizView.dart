@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:quick_quiz/Constant/Constant.dart';
 import 'package:quick_quiz/Model/QuizQuestionModel.dart';
 import 'package:quick_quiz/Service/ApiService.dart';
@@ -73,7 +72,7 @@ class _QuizViewState extends State<QuizView> {
           minHeight: 10,
           semanticsLabel: "quiz progress bar",
           backgroundColor: Constant.primaryColorLighter,
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.redAccent),
         ),
       ),
       leading: IconButton(
