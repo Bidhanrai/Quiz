@@ -1,6 +1,9 @@
 # quick_quiz
 
-A new Flutter application.
+A Basic Quiz App in Flutter with dynamic quiestions and different categories to choose from.
+Api: https://opentdb.com
+
+![lcds___displays_Screen_Shot_2019-07-11_at_5 55 22_PM](https://user-images.githubusercontent.com/26114744/175955479-4d5fa7fd-488d-49a0-8cad-cd5961895660.png)
 
 ## Getting Started
 
