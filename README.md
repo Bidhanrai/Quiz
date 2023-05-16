@@ -5,6 +5,8 @@ A Basic Quiz App in Flutter with dynamic quiestions and different categories to 
 Api: https://opentdb.com
 
 <img width="400" src="https://user-images.githubusercontent.com/26114744/175955479-4d5fa7fd-488d-49a0-8cad-cd5961895660.png"> 
+<img width="400" src="https://github.com/Bidhanrai/Quiz/blob/18ccccfd2e82dabacea487cbf1fc9ca642c59abe/asset/animal.jpg"> 
+
 
 ## Getting Started
 
